@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
-public class Seating 
+public class Seats 
 {
+   //Creating an array that shows and contains the letter of the seats.
    public static char[][] seats={{ 'A', 'B', 'C', 'D' }, 
                                  { 'A', 'B', 'C', 'D' }, 
                                  { 'A', 'B', 'C', 'D' },
@@ -12,11 +13,13 @@ public class Seating
 
    public static void main(String[] args) 
    {
+      //Variables and setting the row number and seat column lengths
    Scanner seatInput = new Scanner(System.in);
    String userChoice = "";
    int rowNumber=-1;
    int seatColumn=-1;
 
+   //Loop that continues to take the users input and checks for if the input is valid or not valid
       while (!userChoice.equalsIgnoreCase("done") && seatsAvailable()) 
       {
       userInput();
@@ -31,7 +34,7 @@ public class Seating
          System.out.println("Invalid.");
          continue;
       }
-       
+       //If the input is valid it records the users input
       else 
       {
          rowNumber = userChoice.charAt(0) - 48;
@@ -55,11 +58,12 @@ public class Seating
          break;
          }
       }
-
+         // Check to see if the uesr input is already taken
       if (seats[rowNumber-1][seatColumn-1] == 'X') 
       {
       System.out.println("Seat taken.");   
       } 
+      //Else it will book the seat by replacing it with X and outputting "Booked seat"
          else 
          {
          seats[rowNumber-1][seatColumn-1] = 'X';
@@ -68,6 +72,7 @@ public class Seating
       }
    }   
 }
+   //Boolean to check if the seats are available
 
    public static boolean seatsAvailable() 
    {
@@ -84,6 +89,7 @@ public class Seating
          return false;
    }
 
+   //Following two methods display the array and ask the user to either enter a seat to book or to end the code
    public static void userInput() 
    {
    System.out.println("Choose seat, to end type done");
