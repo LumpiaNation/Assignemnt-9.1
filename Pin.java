@@ -1,4 +1,6 @@
-
+//Luke Ugalino
+//Abraham Martinez
+//Benjamin Novakow
 import java.util.Random;
 
 public class Pin
