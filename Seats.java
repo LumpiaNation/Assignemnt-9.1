@@ -1,5 +1,7 @@
+//Luke Ugalino
+//Abraham Martinez
+//Benjamin Novakow
 import java.util.Scanner;
-
 public class Seats 
 {
    //Creating an array that shows and contains the letter of the seats.
